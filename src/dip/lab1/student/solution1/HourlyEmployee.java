@@ -8,10 +8,10 @@ package dip.lab1.student.solution1;
  *
  * @author your name goes here
  */
-public class HourlyEmployee extends Employee {
+public class HourlyEmployee implements Employee {
     
-    /** default constructor. Is this the best way to go? */
-    public HourlyEmployee() {}
+    private double hourlyRate;
+    private double totalHrsForYear;
 
     /**
      * Convenience constructor. Is this the best way to go?
@@ -23,4 +23,28 @@ public class HourlyEmployee extends Employee {
         setTotalHrsForYear(totalHrsForYear);
     }
 
+    public double getAnnualWages() {
+        return this.hourlyRate * this.totalHrsForYear;
+    }
+
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    public void setHourlyRate(double hourlyRate) {
+        //validate
+        this.hourlyRate = hourlyRate;
+    }
+
+    public double getTotalHrsForYear() {
+        return totalHrsForYear;
+    }
+
+    public void setTotalHrsForYear(double totalHrsForYear) {
+        //validate
+        this.totalHrsForYear = totalHrsForYear;
+    }
+
+    
+    
 }
